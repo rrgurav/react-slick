@@ -64,7 +64,11 @@ const getSlideStyle = spec => {
     if (spec.vertical) {
       style.top = -spec.index * parseInt(spec.slideHeight);
     } else {
-      style.left = -spec.index * parseInt(spec.slideWidth);
+      if (spec.arabic) {
+        style.right = -spec.index * parseInt(spec.slideWidth);
+      } else {
+        style.left = -spec.index * parseInt(spec.slideWidth);
+      }
     }
     style.opacity = spec.currentSlide === spec.index ? 1 : 0;
     style.zIndex = spec.currentSlide === spec.index ? 999 : 998;

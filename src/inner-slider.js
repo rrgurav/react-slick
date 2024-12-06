@@ -644,7 +644,8 @@ export class InnerSlider extends React.Component {
       "unslick",
       "centerPadding",
       "targetSlide",
-      "useCSS"
+      "useCSS",
+      "arabic"
     ]);
     const { pauseOnHover } = this.props;
     trackProps = {
@@ -744,7 +745,7 @@ export class InnerSlider extends React.Component {
 
     let innerSliderProps = {
       className: className,
-      dir: "ltr",
+      dir: spec.arabic ? "rtl" : "ltr",
       style: this.props.style
     };
 

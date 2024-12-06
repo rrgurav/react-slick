@@ -51,6 +51,7 @@ let defaultProps = {
   variableWidth: false,
   vertical: false,
   waitForAnimate: true,
+  arabic: false,
   asNavFor: null,
   unslick: false
 };
